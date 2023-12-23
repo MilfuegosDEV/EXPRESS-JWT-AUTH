@@ -1,0 +1,38 @@
+{
+  "name": "dinoboard-core",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A robust set of tools and features designed to streamline business administration.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilfuegosDEV/DinoBoard-Core.git"
+  },
+  "keywords": [
+    "dashboard",
+    "dinocorp",
+    "business",
+    "administration"
+  ],
+  "author": "DinoCorp",
+  "bugs": {
+    "url": "https://github.com/MilfuegosDEV/DinoBoard-Core/issues"
+  },
+  "homepage": "https://github.com/MilfuegosDEV/DinoBoard-Core#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  }
+}
