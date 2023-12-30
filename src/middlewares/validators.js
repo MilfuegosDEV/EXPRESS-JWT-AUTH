@@ -18,7 +18,7 @@ export function fieldNotEmpty(value, field) {
  * @returns {String | null} - Returns a message if the email is not valid; otherwise, returns null.
  */
 export function fieldIsEmail(value) {
-  return !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+  return value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
     ? { msg: `${value} isn't a valid email.` }
     : null;
 }
@@ -31,7 +31,9 @@ export function fieldIsEmail(value) {
  * @returns {String | null} - Returns a message if passwords don't match; otherwise, returns null.
  */
 export function passwordMatches(password, password2) {
-  return password !== password2 ? { msg: "Password doesn't match" } : null;
+  return password !== password2 && password && password2
+    ? { msg: "Password doesn't match" }
+    : null;
 }
 
 /**
@@ -57,7 +59,7 @@ export function fieldMaxLength(value, maxLength, field) {
  * @returns {String | null} - Returns a message if the length is below minLength; otherwise, returns null.
  */
 export function fieldMinLength(value, minLength, field) {
-  return !value || value.length < minLength
+  return value && value.length < minLength
     ? { msg: `${field} must be at least ${minLength} characters long.` }
     : null;
 }
@@ -72,8 +74,7 @@ export function fieldMinLength(value, minLength, field) {
  * @returns {String | null} - Returns a message if the length is outside the specified range; otherwise, returns null.
  */
 export function fieldLengthRange(value, minLength, maxLength, field) {
-  return typeof fieldMaxLength(value, maxLength, field) === 'string' ||
-    typeof fieldMinLength(value, minLength, field) === 'string'
+  return value.length < minLength || value.length > maxLength
     ? {
         msg: `${field} must be within the range of ${minLength} to ${maxLength} characters.`,
       }
