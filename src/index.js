@@ -1,34 +1,42 @@
-import 'dotenv/config.js';
+import 'dotenv/config';
+import './app/config/db';
+import i18n from './app/config/i18n';
+import { initialSetup } from './app/libs';
+
+import {
+  acceptLanguage,
+  globalErrorHandler,
+  resourceNotFound,
+} from './app/middlewares';
+
 import express from 'express';
-import mongoose from 'mongoose';
-import router from './routes/routes.js';
-import errorCallback from './middlewares/errorCallback.js';
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
+
+import userRoutes from './app/routes/user.routes';
+import authRoutes from './app/routes/auth.routes';
+// configs
+
+// Middlewares
 
 const PORT = process.env.PORT || 4000;
 
 const app = express();
 
-app.use(express.json({ limit: '50mb' }));
+// Initial setup
+initialSetup();
 
-// Routes
-app.use('/api', router);
+app.use(morgan('dev'));
 
-app.use(errorCallback);
+app.use(bodyParser.json({ limit: '50mb' }));
 
-const startServer = async () => {
-  try {
-    mongoose.set('strictQuery', true);
-    mongoose
-      .connect(process.env.MONGODB_URL)
-      .then(() => console.log('MongoDB connected.'))
-      .catch((err) => console.log(err));
+app.use(acceptLanguage);
+app.use(i18n.init);
 
-    app.listen(PORT, () => {
-      console.log(`http://localhost:${PORT}/`);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-};
+app.use('/api/users', userRoutes);
+app.use('/api/auth', authRoutes);
 
-startServer();
+app.use(resourceNotFound); // for unexisting endpoints
+app.use(globalErrorHandler); // the lastest middleware
+
+app.listen(PORT, () => console.log(`http://localhost:${PORT}/`));
