@@ -1,0 +1,6 @@
+"use strict";require("dotenv/config"),require("./app/config/db");var _i18n=_interopRequireDefault(require("./app/config/i18n")),_libs=require("./app/libs"),_middlewares=require("./app/middlewares"),_express=_interopRequireDefault(require("express")),_morgan=_interopRequireDefault(require("morgan")),_bodyParser=_interopRequireDefault(require("body-parser")),_user=_interopRequireDefault(require("./app/routes/user.routes")),_auth=_interopRequireDefault(require("./app/routes/auth.routes"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}// configs
+// Middlewares
+var PORT=process.env.PORT||4e3,app=(0,_express["default"])();// Initial setup
+// for unexisting endpoints
+// the lastest middleware
+(0,_libs.initialSetup)(),app.use((0,_morgan["default"])("dev")),app.use(_bodyParser["default"].json({limit:"50mb"})),app.use(_middlewares.acceptLanguage),app.use(_i18n["default"].init),app.use("/api/users",_user["default"]),app.use("/api/auth",_auth["default"]),app.use(_middlewares.resourceNotFound),app.use(_middlewares.globalErrorHandler),app.listen(PORT,function(){return console.log("http://localhost:".concat(PORT,"/"))});
