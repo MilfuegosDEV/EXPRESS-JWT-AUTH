@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MilfuegosDEV/DinoBoard-Core.git"
+    "url": "git+https://github.com/MilfuegosDEV/JWT-AUTH.git"
   },
   "keywords": [
     "dashboard",
@@ -41,9 +41,9 @@
   ],
   "author": "DinoCorp",
   "bugs": {
-    "url": "https://github.com/MilfuegosDEV/DinoBoard-Core/issues"
+    "url": "https://github.com/MilfuegosDEV/JWT-AUTH/issues"
   },
-  "homepage": "https://github.com/MilfuegosDEV/DinoBoard-Core#readme",
+  "homepage": "https://github.com/MilfuegosDEV/JWT-AUTH#readme",
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
