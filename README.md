@@ -121,3 +121,10 @@ Feel free to contribute! Follow these steps to get started.
 3. Commit your changes.
 4. Push to the branch.
 5. Open a pull request.
+
+## License
+
+This project is under the MIT License. See the [LICENSE](LICENSE) file
+for more details. Feel free to modify and customize the
+template based on your project's specifics and requirements.
+
