@@ -4,7 +4,7 @@
 ![Express](https://img.shields.io/badge/express-%23000000.svg?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-This repository focuses on providing an example of jwt authentication and user roles management.
+This repository focuses on providing an example of jwt authentication, user roles management and internationalization.
 
 ## Getting Started 📕
 
