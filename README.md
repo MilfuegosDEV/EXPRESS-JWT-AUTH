@@ -1,10 +1,10 @@
-# DinoBoard-Core 💻
+# JWT-AUTH 🔐
 
 ![Node.js](https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/express-%23000000.svg?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-This repository focuses on providing the core of DinoBoard, offering a robust set of tools and features designed to streamline business administration.
+This repository focuses on providing an example of jwt authentication and user roles management.
 
 ## Getting Started 📕
 
@@ -19,8 +19,8 @@ Ensure you have [Node.js](https://nodejs.org/en/download/) on your local machine
 1. **Clone the repo** 📦
 
    ```bash
-   $ git clone 'https://github.com/MilfuegosDEV/DinoBoard-Core.git'
-   $ cd dinoboard-core
+   $ git clone 'https://github.com/MilfuegosDEV/JWT-AUTH.git'
+   $ cd JWT-AUTH
    ```
 
 2. **Setup .env file** 🔒
@@ -89,7 +89,7 @@ Each configuration option in the `.env` file serves a specific purpose in config
 ## Project Structure 📂
 
 ```
-DinoBoard-Core
+JWT-AUTH
 ├───build // compiled src
 |
 ├───src
@@ -116,7 +116,7 @@ DinoBoard-Core
 ## Contributing 🤝
 
 Feel free to contribute! Follow these steps to get started.
-
+1. Fork repo.
 2. Create your feature branch.
 3. Commit your changes.
 4. Push to the branch.
