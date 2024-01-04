@@ -1,7 +1,6 @@
 {
   "name": "dinoboard-core",
   "version": "1.0.0",
-  "private": true,
   "description": "A robust set of tools and features designed to streamline business administration.",
   "main": "src/index.js",
   "babel": {
