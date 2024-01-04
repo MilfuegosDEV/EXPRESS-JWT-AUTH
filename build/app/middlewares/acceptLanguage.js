@@ -1,0 +1,1 @@
+"use strict";var _acceptLanguageParser=require("accept-language-parser");Object.defineProperty(exports,"__esModule",{value:!0}),exports.acceptLanguage=acceptLanguage;function acceptLanguage(a,b,c){var d=(0,_acceptLanguageParser.parse)(a.headers["accept-language"]);return d&&0!==d.length?(a.language=d[0].code,c()):(a.language="en",c())}

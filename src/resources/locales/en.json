@@ -1,0 +1,38 @@
+{
+  "messages": {
+    "error": {
+      "fieldEmpty": "The %s field must not be empty.",
+      "fieldIsNotEmail": "The email is not valid.",
+      "passwordDontMatches": "Passwords do not match.",
+      "fieldMaxLength": "The %s field must be at most %d characters long.",
+      "fieldMinLength": "The %s field must be at least %d characters long.",
+      "fieldLengthRange": "The %s field must be between %d and %d characters long.",
+      "alreadyInUse": "%s is already in use.",
+      "invalidID": "Invalid ID.",
+      "notFound": "Not found.",
+      "documentsNotFound": "Any document has been found",
+      "documentNotFound": "Document not found",
+      "notProvided": "%s not provided.",
+      "serverError": "Internal server error.",
+      "userNotFound": "User not found.",
+      "invalidPassword": "Invalid password.",
+      "tokenNotProvided": "Sign in to continue",
+      "unauthorized": "Unauthorized.",
+      "forbidden": "Access denied"
+    },
+    "success": {
+      "new": "Registered successfully.",
+      "update": "Updated successfully."
+    },
+    "info": {
+      "requestValidateEmail": "Check your email to validate your account."
+    }
+  },
+  "fields": {
+    "name": "name",
+    "lastname": "lastname",
+    "email": "email",
+    "password": "password",
+    "confirm-password": "confirm password"
+  }
+}

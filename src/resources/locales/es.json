@@ -1,0 +1,38 @@
+{
+  "messages": {
+    "error": {
+      "fieldEmpty": "El campo %s no debe estar vacío.",
+      "fieldIsNotEmail": "El correo electrónico es inválido.",
+      "passwordDontMatches": "Las contraseñas no coinciden.",
+      "fieldMaxLength": "El campo %s debe tener como máximo %d caracteres.",
+      "fieldMinLength": "El campo %s debe tener al menos %d caracteres.",
+      "fieldLengthRange": "El campo %s debe tener entre %d y %d caracteres.",
+      "alreadyInUse": "%s ya está en uso.",
+      "invalidID": "ID inválido.",
+      "notFound": "No encontrado.",
+      "documentsNotFound": "Ningún registro ha sido encontrado.",
+      "documentNotFound": "Registro no encontrado",
+      "notProvided": "No se ha proporcionado el %s.",
+      "serverError": "Error interno del servidor.",
+      "userNotFound": "Usuario no encontrado.",
+      "invalidPassword": "Contraseña incorrecta.",
+      "tokenNotProvided": "Inicia sesión para continuar",
+      "unauthorized": "No authorizado.",
+      "forbidden": "Acceso denegado."
+    },
+    "success": {
+      "new": "Registro exitoso.",
+      "update": "Actualización existosa."
+    },
+    "info": {
+      "requestValidateEmail": "Verifica tu correo electrónico para validar tu cuenta."
+    }
+  },
+  "fields": {
+    "name": "nombre",
+    "lastname": "apellido",
+    "email": "correo electrónico",
+    "password": "contraseña",
+    "confirm-password": "confirmar contraseña"
+  }
+}

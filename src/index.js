@@ -1,23 +1,42 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import connectDB from './db/connect.js';
+import 'dotenv/config';
+import './app/config/db';
+import i18n from './app/config/i18n';
+import { initialSetup } from './app/libs';
 
-dotenv.config();
+import {
+  acceptLanguage,
+  globalErrorHandler,
+  resourceNotFound,
+} from './app/middlewares';
+
+import express from 'express';
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
+
+import userRoutes from './app/routes/user.routes';
+import authRoutes from './app/routes/auth.routes';
+// configs
+
+// Middlewares
 
 const PORT = process.env.PORT || 4000;
 
 const app = express();
-app.use(express.json({ limit: '50mb' }));
 
-const startServer = async () => {
-  try {
-    connectDB(process.env.MONGODB_URL);
-    app.listen(PORT, () => {
-      console.log(`http://localhost:${PORT}/`);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-};
+// Initial setup
+initialSetup();
 
-startServer();
+app.use(morgan('dev'));
+
+app.use(bodyParser.json({ limit: '50mb' }));
+
+app.use(acceptLanguage);
+app.use(i18n.init);
+
+app.use('/api/users', userRoutes);
+app.use('/api/auth', authRoutes);
+
+app.use(resourceNotFound); // for unexisting endpoints
+app.use(globalErrorHandler); // the lastest middleware
+
+app.listen(PORT, () => console.log(`http://localhost:${PORT}/`));
