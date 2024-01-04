@@ -44,6 +44,7 @@
     "url": "https://github.com/MilfuegosDEV/JWT-AUTH/issues"
   },
   "homepage": "https://github.com/MilfuegosDEV/JWT-AUTH#readme",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
