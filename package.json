@@ -1,5 +1,5 @@
 {
-  "name": "dinoboard-core",
+  "name": "jwt-auth",
   "version": "1.0.0",
   "description": "A robust set of tools and features designed to streamline business administration.",
   "main": "src/index.js",
@@ -39,7 +39,7 @@
     "business",
     "administration"
   ],
-  "author": "DinoCorp",
+  "author": "MilfuegosDEV",
   "bugs": {
     "url": "https://github.com/MilfuegosDEV/JWT-AUTH/issues"
   },
