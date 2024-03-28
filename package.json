@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MilfuegosDEV/JWT-AUTH.git"
+    "url": "git+https://github.com/MilfuegosDEV/EXPRESS-JWT-AUTH.git"
   },
   "keywords": [
     "dashboard",
